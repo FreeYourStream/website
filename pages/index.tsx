@@ -1,4 +1,15 @@
 import type { NextPage } from "next";
+import {
+  FC,
+  ReactElement,
+  ReactNode,
+  createRef,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 
 import { Anchor } from "../components/Anchor";
 import { Body } from "../components/Body";
@@ -20,6 +31,26 @@ import GitHubIcon from "../icons/github.svg";
 import ShopIcon from "../icons/shopping_cart.svg";
 import WikiIcon from "../icons/wiki.svg";
 
+const DisplayCard: FC<{
+  className?: string;
+  href: string;
+  children: ReactNode;
+  x: number;
+  y: number;
+}> = ({ className = "", href, children, x, y }) => {
+  return (
+    <a
+      rel="noreferrer"
+      href={href}
+      target="_blank"
+      style={{ fontSize: "12px" }}
+      className={`bg-white rounded-md flex justify-center items-center cursor-pointer text-black font-bold flex-col ${className}`}
+    >
+      {children}
+    </a>
+  );
+};
+
 const Home: NextPage = () => {
   return (
     <div className="">
@@ -34,66 +65,57 @@ const Home: NextPage = () => {
             }}
             className="fixed h-[600px] md:h-[420px] w-full left-0 -z-10 opacity-30 bg-black"
           ></div>
-          <div className="flex flex-col md:flex-row md:items-start align-middle justify-center text-white mb-16">
-            <div className="flex justify-center">
-              <div className="w-[362px] h-[275px] relative -mx-7 md:mx-0">
-                <a
-                  rel="noreferrer"
-                  href={SHOP_URL}
-                  target="_blank"
-                  className="bg-white rounded-md flex justify-center items-center cursor-pointer absolute top-0 w-[108px] h-[74px] text-black font-bold flex-col"
-                >
-                  <ShopIcon className="fill-black w-10"></ShopIcon>
+          <div className="flex flex-col md:flex-row items-center md:items-start align-middle justify-center text-white mb-16">
+            <div className="grid grid-rows-3 gap-y-4 w-80 -mx-5">
+              <div className="grid grid-cols-3 gap-x-4">
+                <DisplayCard x={0} y={0} href={SHOP_URL}>
+                  <ShopIcon className="fill-black w-1/3"></ShopIcon>
                   Shop
-                </a>
-                <a
-                  rel="noreferrer"
-                  href={CONFIGURATOR_URL}
-                  target="_blank"
-                  className="bg-white rounded-md flex justify-center items-center cursor-pointer absolute top-[100px] w-[108px] h-[74px] text-black font-bold flex-col"
-                >
-                  <ConfiguratorIcon className="fill-black w-10"></ConfiguratorIcon>
-                  Configurator
-                </a>
+                </DisplayCard>
                 <div
-                  style={{ lineHeight: "66px", fontSize: "100px" }}
-                  className="font-fd font-thin absolute left-[117px] text-white"
+                  style={{
+                    lineHeight: `65px`,
+                    fontSize: `85px`,
+                  }}
+                  className="flex justify-between font-fd font-thin text-white align-text-top -ml-2 -mt-1.5 col-start-2 col-end-4"
                 >
-                  FREE
+                  <div>F</div>
+                  <div>R</div>
+                  <div>E</div>
+                  <div>E</div>
                 </div>
+              </div>
+              <div className="grid grid-cols-3  gap-x-4">
+                <DisplayCard x={0} y={1} href={CONFIGURATOR_URL}>
+                  <ConfiguratorIcon className="fill-black w-1/3"></ConfiguratorIcon>
+                  Configurator
+                </DisplayCard>
                 <div
-                  style={{ lineHeight: "66px", fontSize: "100px" }}
-                  className="font-fd font-normal absolute top-[100px] left-[122px] text-white tracking-tighter"
+                  style={{
+                    lineHeight: `65px`,
+                    fontSize: `85px`,
+                  }}
+                  className="flex justify-between font-fd font-normal text-white -ml-1 -mt-1.5 col-start-2 col-end-4"
                 >
-                  DECK
-                </div>{" "}
-                <a
-                  rel="noreferrer"
-                  href={WIKI_URL}
-                  target="_blank"
-                  className="bg-white rounded-md flex justify-center items-center cursor-pointer absolute top-[200px] w-[108px] h-[74px] text-black font-bold flex-col"
-                >
-                  <WikiIcon className="fill-black w-10"></WikiIcon>
+                  <div>D</div>
+                  <div>E</div>
+                  <div>C</div>
+                  <div>K</div>
+                </div>
+              </div>
+              <div className=" gap-x-4 grid grid-cols-3">
+                <DisplayCard x={0} y={2} href={WIKI_URL}>
+                  <WikiIcon className="fill-black w-1/3"></WikiIcon>
                   Wiki
-                </a>{" "}
-                <a
-                  rel="noreferrer"
-                  href={GITHUB_URL}
-                  target="_blank"
-                  className="bg-white rounded-md flex justify-center items-center cursor-pointer absolute top-[200px] left-[127px] w-[108px] h-[74px] text-black font-bold flex-col"
-                >
-                  <GitHubIcon className="fill-black w-10"></GitHubIcon>
+                </DisplayCard>{" "}
+                <DisplayCard x={1} y={2} href={GITHUB_URL}>
+                  <GitHubIcon className="fill-black w-1/3"></GitHubIcon>
                   GitHub
-                </a>{" "}
-                <a
-                  rel="noreferrer"
-                  href={DISCORD_URL}
-                  target="_blank"
-                  className="bg-white rounded-md flex justify-center items-center cursor-pointer absolute top-[200px] left-[254px] w-[108px] h-[74px] text-black font-bold flex-col"
-                >
-                  <DiscordIcon className="fill-black w-10"></DiscordIcon>
+                </DisplayCard>{" "}
+                <DisplayCard x={2} y={2} href={DISCORD_URL}>
+                  <DiscordIcon className="fill-black w-1/3"></DiscordIcon>
                   Discord
-                </a>
+                </DisplayCard>
               </div>
             </div>
             <div

@@ -5,24 +5,38 @@ import { GITHUB_URL } from "../consts";
 export const Footer: NextComponentType = () => {
   return (
     <footer className="bg-gray-900">
-      <div className="flex justify-center items-center bg-gradient-to-r from-primary-400 to-primary-600 text-white text-xl mb-16">
-        <a target="_blank" href={GITHUB_URL}>
-          <div className="p-4 ease-in-out transition-all hover:bg-primary-700 cursor-pointer text-center">
+      <div className="flex flex-col gap-1  md:flex-row justify-center items-center bg-gradient-to-r from-primary-400 to-primary-600 text-white text-xl mb-16">
+        <a
+          className="w-full bg-primary-500 md:bg-opacity-0 md:w-auto"
+          target="_blank"
+          href={GITHUB_URL}
+        >
+          <div className="py-4 px-12 ease-in-out transition-all hover:bg-primary-700 cursor-pointer text-center">
             Shop
           </div>
         </a>
-        <a target="_blank" href={GITHUB_URL}>
-          <div className="p-4 ease-in-out transition-all hover:bg-primary-700 cursor-pointer text-center">
+        <a
+          className="w-full bg-primary-500 md:bg-opacity-0 md:w-auto"
+          target="_blank"
+          href={GITHUB_URL}
+        >
+          <div className="py-4 px-12 ease-in-out transition-all hover:bg-primary-700 cursor-pointer text-center">
             Discord
           </div>
         </a>
-        <a href="/privacy">
-          <div className="p-4 ease-in-out transition-all hover:bg-primary-700 cursor-pointer text-center">
+        <a
+          className="w-full bg-primary-500 md:bg-opacity-0 md:w-auto"
+          href="/privacy"
+        >
+          <div className="py-4 px-12 ease-in-out transition-all hover:bg-primary-700 cursor-pointer text-center">
             Privacy Policy
           </div>
         </a>
-        <a href="/imprint">
-          <div className="p-4 ease-in-out transition-all hover:bg-primary-700 cursor-pointer text-center">
+        <a
+          className="w-full bg-primary-500 md:bg-opacity-0 md:w-auto"
+          href="/imprint"
+        >
+          <div className="py-4 px-12 ease-in-out transition-all hover:bg-primary-700 cursor-pointer text-center">
             Imprint
           </div>
         </a>

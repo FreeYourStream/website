@@ -36,7 +36,7 @@ export const Header: FC<{ title?: string }> = ({ title }) => {
           </div>
         </header>
       </div>
-      <div className="h-24" />
+      <div className="h-16" />
     </>
   );
 };

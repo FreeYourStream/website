@@ -16,14 +16,16 @@ export const Section: FC<{
           : "bg-gray-700"
       } ${transparent ? "bg-opacity-0" : ""}`}
     >
-      {title && (
-        <Title
-          className="mt-8 md:flex-grow md:w-full max-w-page"
-          text={title}
-        />
-      )}
-      <div className="w-full max-w-page flex-grow justify-center">
-        {children}
+      <div className="w-full max-w-page ">
+        <>
+          {title && (
+            <Title
+              className="mt-8 text-center md:text-left max-w-page w-full self-start"
+              text={title}
+            />
+          )}
+          {children}
+        </>
       </div>
     </main>
   );

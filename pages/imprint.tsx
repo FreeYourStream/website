@@ -9,7 +9,7 @@ import { Title } from "../components/Title";
 const Imprint: NextPage = () => {
   return (
     <div className="">
-      <Header />
+      <Header title="Imprint" />
       <Body>
         <Section title="Imprint">
           <div className="flex flex-col gap-y-4 text-white text-xl">

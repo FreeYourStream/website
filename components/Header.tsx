@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { FC } from "react";
 
 import { DISCORD_URL, GITHUB_URL, SHOP_URL } from "../consts";
@@ -17,21 +18,36 @@ export const Header: FC<{ title?: string }> = ({ title }) => {
         </Head>
         <header className="flex items-center justify-center h-16 px-8 bg-gray-700 border-b-2 border-gray-600 text-white">
           <div className="flex justify-between items-center max-w-page flex-grow">
-            <a href="/">
+            <Link rel="noreferrer" href="/">
               <h1 className="font-fd font-thin text-3xl select-none">
                 FreeYourStream
               </h1>
-            </a>
+            </Link>
             <div className="flex justify-between gap-4">
-              <a target="_blank" href={SHOP_URL} className="flex w-6 h-6">
-                <ShoppingCart className="fill-white" />
-              </a>
-              <a target="_blank" href={DISCORD_URL} className="flex w-6 h-6">
+              <Link
+                rel="noreferrer"
+                target="_blank"
+                href={SHOP_URL}
+                className="flex w-6 h-6"
+              >
+                <ShoppingCart className="h-6 fill-white" />
+              </Link>
+              <Link
+                rel="noreferrer"
+                target="_blank"
+                href={DISCORD_URL}
+                className="flex w-6 h-6"
+              >
                 <Discord className="h-6 fill-white" />
-              </a>
-              <a target="_blank" href={GITHUB_URL} className="flex w-6 h-6">
-                <Github className="fill-white" />
-              </a>
+              </Link>
+              <Link
+                rel="noreferrer"
+                target="_blank"
+                href={GITHUB_URL}
+                className="flex w-6 h-6"
+              >
+                <Github className="h-6 fill-white" />
+              </Link>
             </div>
           </div>
         </header>

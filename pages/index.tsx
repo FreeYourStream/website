@@ -38,6 +38,7 @@ const Home: NextPage = () => {
             <div className="flex justify-center">
               <div className="w-[362px] h-[275px] relative -mx-7 md:mx-0">
                 <a
+                  rel="noreferrer"
                   href={SHOP_URL}
                   target="_blank"
                   className="bg-white rounded-md flex justify-center items-center cursor-pointer absolute top-0 w-[108px] h-[74px] text-black font-bold flex-col"
@@ -46,6 +47,7 @@ const Home: NextPage = () => {
                   Shop
                 </a>
                 <a
+                  rel="noreferrer"
                   href={CONFIGURATOR_URL}
                   target="_blank"
                   className="bg-white rounded-md flex justify-center items-center cursor-pointer absolute top-[100px] w-[108px] h-[74px] text-black font-bold flex-col"
@@ -66,6 +68,7 @@ const Home: NextPage = () => {
                   DECK
                 </div>{" "}
                 <a
+                  rel="noreferrer"
                   href={WIKI_URL}
                   target="_blank"
                   className="bg-white rounded-md flex justify-center items-center cursor-pointer absolute top-[200px] w-[108px] h-[74px] text-black font-bold flex-col"
@@ -74,6 +77,7 @@ const Home: NextPage = () => {
                   Wiki
                 </a>{" "}
                 <a
+                  rel="noreferrer"
                   href={GITHUB_URL}
                   target="_blank"
                   className="bg-white rounded-md flex justify-center items-center cursor-pointer absolute top-[200px] left-[127px] w-[108px] h-[74px] text-black font-bold flex-col"
@@ -82,6 +86,7 @@ const Home: NextPage = () => {
                   GitHub
                 </a>{" "}
                 <a
+                  rel="noreferrer"
                   href={DISCORD_URL}
                   target="_blank"
                   className="bg-white rounded-md flex justify-center items-center cursor-pointer absolute top-[200px] left-[254px] w-[108px] h-[74px] text-black font-bold flex-col"
@@ -137,10 +142,11 @@ const Home: NextPage = () => {
               <p className="text-white">
                 You can find multiple videos on{" "}
                 <Anchor
-                  text="YouTube"
                   newTab
                   href="https://www.youtube.com/watch?v=-3Zw8hbpVq4"
-                />
+                >
+                  YouTube
+                </Anchor>
                 .
               </p>
               <p className="text-white">
@@ -148,8 +154,9 @@ const Home: NextPage = () => {
                 <Anchor
                   href="https://www.hackster.io/news/the-freedeck-brings-faster-shortcuts-to-your-fingertips-470e26acf202"
                   newTab
-                  text="hackster.io"
-                />{" "}
+                >
+                  hackster.io
+                </Anchor>{" "}
                 article
               </p>
             </Card>
@@ -157,26 +164,37 @@ const Home: NextPage = () => {
               <p className="text-white">
                 Nothing special. Any modern OS will do as the FreeDeck simulates
                 a USB-Keyboard. The{" "}
-                <Anchor text="App" href={DOWNLOAD_URL} newTab /> is available
-                for Windows, Linux and Mac. A{" "}
-                <Anchor text="WebApp" href={CONFIGURATOR_URL} newTab /> is also
-                available.
+                <Anchor href={DOWNLOAD_URL} newTab>
+                  App
+                </Anchor>{" "}
+                is available for Windows, Linux and Mac. A{" "}
+                <Anchor href={CONFIGURATOR_URL} newTab>
+                  WebApp
+                </Anchor>{" "}
+                is also available.
               </p>
             </Card>
             <Card title="How do I get started?">
               <p className="text-white">
-                Check out the <Anchor text="Wiki" href={WIKI_URL} newTab />{" "}
+                Check out the{" "}
+                <Anchor href={WIKI_URL} newTab>
+                  Wiki
+                </Anchor>{" "}
                 first. Maybe check out Adams Video on{" "}
                 <Anchor
-                  text="YouTube"
                   newTab
                   href="https://www.youtube.com/watch?v=-3Zw8hbpVq4"
-                />
+                >
+                  YouTube
+                </Anchor>
                 , too.
               </p>
               <p className="text-white">
                 If you have any other questions check out our{" "}
-                <Anchor text="Discord" newTab href={DISCORD_URL} />!
+                <Anchor newTab href={DISCORD_URL}>
+                  Discord
+                </Anchor>
+                !
               </p>
             </Card>
           </div>

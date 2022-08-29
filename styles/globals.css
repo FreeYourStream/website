@@ -6,6 +6,10 @@ svg {
   width:100%;
 }
 
+html {
+  @apply min-w-[350px];
+}
+
 body {
   @apply bg-gray-900;
 }

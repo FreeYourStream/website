@@ -26,7 +26,9 @@ import {
   WIKI_URL,
 } from "../consts";
 import ConfiguratorIcon from "../icons/configurator.svg";
+import DeckIcon from "../icons/deck.svg";
 import DiscordIcon from "../icons/discord.svg";
+import FreeIcon from "../icons/free.svg";
 import GitHubIcon from "../icons/github.svg";
 import ShopIcon from "../icons/shopping_cart.svg";
 import WikiIcon from "../icons/wiki.svg";
@@ -66,23 +68,14 @@ const Home: NextPage = () => {
             className="fixed h-[600px] md:h-[420px] w-full left-0 -z-10 opacity-30 bg-black"
           ></div>
           <div className="flex flex-col md:flex-row items-center md:items-start align-middle justify-center text-white mb-16">
-            <div className="grid grid-rows-3 gap-y-4 w-80 -mx-5">
+            <div className="grid grid-rows-3 gap-y-4 max-w-[25rem] -mx-5 md:mx-0">
               <div className="grid grid-cols-3 gap-x-4">
                 <DisplayCard x={0} y={0} href={SHOP_URL}>
                   <ShopIcon className="fill-black w-1/3"></ShopIcon>
                   Shop
                 </DisplayCard>
-                <div
-                  style={{
-                    lineHeight: `65px`,
-                    fontSize: `85px`,
-                  }}
-                  className="flex justify-between font-fd font-thin text-white align-text-top -ml-2 -mt-1.5 col-start-2 col-end-4"
-                >
-                  <div>F</div>
-                  <div>R</div>
-                  <div>E</div>
-                  <div>E</div>
+                <div className="flex justify-between font-fd font-thin text-white align-text-top col-start-2 col-end-4">
+                  <FreeIcon className="fill-white" />
                 </div>
               </div>
               <div className="grid grid-cols-3  gap-x-4">
@@ -90,17 +83,8 @@ const Home: NextPage = () => {
                   <ConfiguratorIcon className="fill-black w-1/3"></ConfiguratorIcon>
                   Configurator
                 </DisplayCard>
-                <div
-                  style={{
-                    lineHeight: `65px`,
-                    fontSize: `85px`,
-                  }}
-                  className="flex justify-between font-fd font-normal text-white -ml-1 -mt-1.5 col-start-2 col-end-4"
-                >
-                  <div>D</div>
-                  <div>E</div>
-                  <div>C</div>
-                  <div>K</div>
+                <div className="flex justify-between font-fd font-normal text-white col-start-2 col-end-4">
+                  <DeckIcon className="fill-white" />
                 </div>
               </div>
               <div className=" gap-x-4 grid grid-cols-3">
@@ -120,7 +104,7 @@ const Home: NextPage = () => {
             </div>
             <div
               style={{ color: "#fff0" }}
-              className="flex flex-col bg-clip-text bg-gradient-to-tr from-primary-100 to-primary-300 gap-5 mt-24 md:mt-0 text-center md:text-left"
+              className="flex flex-col bg-clip-text bg-gradient-to-tr from-primary-100 to-primary-300 gap-6 mt-24 md:mt-0 text-center md:text-left"
             >
               <div className="md:ml-8 flex flex-col text-4xl">
                 <p>Everything</p>

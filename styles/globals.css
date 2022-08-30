@@ -19,18 +19,21 @@ body {
   src: url('../public/Nunito-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 1000;
 	font-stretch: 25% 151%;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Barlow';
   src: url("../public/Barlow-Bold.ttf") format('truetype');
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Barlow';
   src: url("../public/Barlow-Medium.ttf") format('truetype');
   font-weight: 300;
+  font-display: swap;
 }
 
 
@@ -38,4 +41,5 @@ body {
   font-family: 'Barlow';
   src: url("../public/Barlow-Light.ttf") format('truetype');
   font-weight: 100;
+  font-display: swap;
 }

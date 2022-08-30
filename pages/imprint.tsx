@@ -16,17 +16,19 @@ const Imprint: NextPage = () => {
             <p>
               FreeYourStream UG (Haftungsbeschränkt)
               <br />
-              Gutsmuthsstraße 14
+              Gutsmuthsstr. 14
               <br />
               12163 Berlin
+              <br />
+              Germany
             </p>
 
             <p>
-              Tel: 030 629 31 844
+              Tel: +4930 629 31 844
               <br />
               E-Mail: info@freeyourstream.com
               <br />
-              Webseite: https://freeyourstream.com
+              Website: https://freeyourstream.com
             </p>
 
             <p>

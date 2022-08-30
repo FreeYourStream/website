@@ -18,7 +18,7 @@ export const Header: FC<{ title?: string }> = ({ title }) => {
         </Head>
         <header className="flex items-center justify-center h-16 px-8 bg-gray-700 border-b-2 border-gray-600 text-white">
           <div className="flex flex-row justify-center sm:justify-between items-center max-w-page flex-grow">
-            <Link rel="noreferrer" href="/">
+            <Link href="/">
               <h1 className="font-fd font-thin text-3xl select-none">
                 FreeYourStream
               </h1>
@@ -30,7 +30,7 @@ export const Header: FC<{ title?: string }> = ({ title }) => {
                 href={SHOP_URL}
                 className="flex w-6 h-6"
               >
-                <ShoppingCart className="h-6 fill-white" />
+                <ShoppingCart className="h-6 fill-white cursor-pointer hover:fill-primary-200" />
               </Link>
               <Link
                 rel="noreferrer"
@@ -38,7 +38,7 @@ export const Header: FC<{ title?: string }> = ({ title }) => {
                 href={DISCORD_URL}
                 className="flex w-6 h-6"
               >
-                <Discord className="h-6 fill-white" />
+                <Discord className="h-6 fill-white cursor-pointer hover:fill-primary-200" />
               </Link>
               <Link
                 rel="noreferrer"
@@ -46,7 +46,7 @@ export const Header: FC<{ title?: string }> = ({ title }) => {
                 href={GITHUB_URL}
                 className="flex w-6 h-6"
               >
-                <Github className="h-6 fill-white" />
+                <Github className="h-6 fill-white cursor-pointer hover:fill-primary-200" />
               </Link>
             </div>
           </div>

@@ -15,6 +15,7 @@ import { Anchor } from "../components/Anchor";
 import { Body } from "../components/Body";
 import { Card } from "../components/Card";
 import { Footer } from "../components/Footer";
+import { Gallery } from "../components/Gallery";
 import { Header } from "../components/Header";
 import { Section } from "../components/Section";
 import {
@@ -46,7 +47,7 @@ const DisplayCard: FC<{
       href={href}
       target="_blank"
       style={{ fontSize: "12px" }}
-      className={`bg-white rounded-md flex justify-center items-center cursor-pointer text-black font-bold flex-col ${className}`}
+      className={`bg-white hover:bg-primary-300 rounded-md flex justify-center items-center cursor-pointer text-black font-bold flex-col ${className}`}
     >
       {children}
     </a>
@@ -55,7 +56,15 @@ const DisplayCard: FC<{
 
 const Home: NextPage = () => {
   return (
-    <div className="">
+    <div className="relative">
+      <Anchor
+        href="https://www.paypal.com/donate/?hosted_button_id=AE87G9FC5DG8C"
+        newTab
+      >
+        <div className="fixed bottom-4 right-4 z-50 text-primary-700 rounded bg-white p-4 md:px-8">
+          Donate
+        </div>
+      </Anchor>
       <Header />
       <Body noBG>
         <Section transparent>
@@ -204,6 +213,9 @@ const Home: NextPage = () => {
               </p>
             </Card>
           </div>
+        </Section>
+        <Section title="Gallery" color>
+          <Gallery />
         </Section>
       </Body>
       <Footer />

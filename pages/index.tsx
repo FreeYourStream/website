@@ -1,15 +1,6 @@
 import type { NextPage } from "next";
-import {
-  FC,
-  ReactElement,
-  ReactNode,
-  createRef,
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import Image from "next/image";
+import { FC, ReactNode } from "react";
 
 import { Anchor } from "../components/Anchor";
 import { Body } from "../components/Body";
@@ -69,13 +60,16 @@ const Home: NextPage = () => {
       <Body noBG>
         <Section transparent>
           <div className="h-16" />
-          <div
-            style={{
-              backgroundImage: "url(freedeck-hero.jpeg)",
-              backgroundSize: "cover",
-            }}
-            className="fixed h-[600px] md:h-[420px] w-full left-0 -z-10 opacity-30 bg-black"
-          ></div>
+          <div className="fixed h-[600px] md:h-[420px] w-full left-0 -z-10 opacity-30 bg-black">
+            <Image
+              quality={30}
+              alt={"Hero"}
+              sizes="100vh"
+              objectFit="cover"
+              layout="fill"
+              src="/freedeck-hero.jpeg"
+            />
+          </div>
           <div className="flex flex-col md:flex-row items-center md:items-start align-middle justify-center text-white mb-16">
             <div className="grid grid-rows-3 gap-y-4 max-w-[25rem] -mx-5 md:mx-0">
               <div className="grid grid-cols-3 gap-x-4">

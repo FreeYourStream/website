@@ -8,8 +8,7 @@ export const Title: FC<{
   return (
     <div className={className}>
       <h1
-        style={{ color: "#0000 !important" }}
-        className={`font-bold bg-clip-text bg-gradient-to-r from-primary-200 to-primary-400 ${
+        className={`font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-200 to-primary-400 ${
           small ? "pb-3" : "pb-6"
         } ${small ? "text-2xl" : "text-4xl"}`}
       >

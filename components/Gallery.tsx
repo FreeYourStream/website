@@ -118,6 +118,7 @@ export const Gallery: FC = () => {
     <div className="slide-container flex-grow -mx-4 md:mx-0">
       <Slide
         duration={5000}
+        autoplay={process.env.NODE_ENV !== "development"}
         arrows={size.width >= 640}
         easing="ease"
         nextArrow={<Arrow direction="right" />}
@@ -127,7 +128,7 @@ export const Gallery: FC = () => {
         {slideImages.map((slideImage, index) => (
           <div
             key={index}
-            className="each-slide relative flex flex-col items-center justify-center mx-2 h-[500px]"
+            className="each-slide relative flex justify-center mx-2 h-[500px]"
           >
             <Image
               alt={slideImage.caption}
@@ -137,7 +138,7 @@ export const Gallery: FC = () => {
               className="justify-center rounded-2xl"
               src={slideImage.url}
             ></Image>
-            <span className="text-white -mt-4 bg-gray-600 rounded-md px-4 py-2">
+            <span className="text-white z-10 md:mb-4 bg-gray-600 rounded-md px-4 py-2 self-end">
               {slideImage.caption}
             </span>
           </div>

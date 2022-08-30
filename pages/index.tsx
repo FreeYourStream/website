@@ -59,7 +59,8 @@ const Home: NextPage = () => {
       <Header />
       <Body noBG>
         <Section transparent>
-          <div className="fixed h-[600px] md:h-[420px] w-full left-0 -z-10 opacity-30 bg-black">
+          <div className="h-16" />
+          <div className="fixed h-[910px] md:h-[515px] w-full left-0 top-16 -z-10 opacity-30 bg-black">
             <Image
               quality={30}
               alt={"Hero"}

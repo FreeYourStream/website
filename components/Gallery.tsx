@@ -11,14 +11,14 @@ const slideImages = [
   },
   {
     url: "/images/skeleton_1.jpg",
-    caption: "DIY Kit assembled (skeleton, no case)",
+    caption: "DIY Kit assembled (skeleton, no case, bit dusty)",
   },
   {
     url: "/images/back_overview_arduino_micro.jpg",
     caption: "DIY Kit partly assembled (back)",
   },
   {
-    url: "/images/case_1.webp",
+    url: "/images/case_1.jpg",
     caption: "Case by Kilian Gosewisch",
   },
   {
@@ -31,7 +31,7 @@ const slideImages = [
   },
   {
     url: "/images/case_4.jpg",
-    caption: "Case by eipporko, build by FalK",
+    caption: "Case by eipporko, build by FaLk",
   },
   {
     url: "/images/case_5.jpg",
@@ -48,6 +48,20 @@ const slideImages = [
   {
     url: "/images/config_3.jpg",
     caption: "Configuring the button actions",
+  },
+  {
+    url: "/images/custom_build_1.jpg",
+    caption: "Custom build 5x3 variant with a knob by Ryan Aukes",
+  },
+  {
+    url: "/images/custom_build_2.png",
+    caption:
+      "Custom build 5x3 variant combined with the DeeJ project. Build by Flousen",
+  },
+  {
+    url: "/images/custom_build_3.png",
+    caption:
+      "Custom build 3x3 variant combined with the deej project and knob. Build by Flousen",
   },
 ];
 function useWindowSize() {
@@ -130,14 +144,16 @@ export const Gallery: FC = () => {
             key={index}
             className="each-slide relative flex justify-center mx-2 h-[500px]"
           >
-            <Image
-              alt={slideImage.caption}
-              sizes="(max-width: 640px) 100vw, 1080px"
-              objectFit="contain"
-              layout="fill"
-              className="justify-center rounded-2xl"
-              src={slideImage.url}
-            ></Image>
+            <a className="cursor-pointer" href={slideImage.url} target="_blank">
+              <Image
+                alt={slideImage.caption}
+                sizes="(max-width: 640px) 100vw, 1080px"
+                objectFit="contain"
+                layout="fill"
+                className="justify-center rounded-2xl"
+                src={slideImage.url}
+              ></Image>
+            </a>
             <span className="text-white z-10 md:mb-4 bg-gray-600 rounded-md px-4 py-2 self-end">
               {slideImage.caption}
             </span>

@@ -144,7 +144,12 @@ export const Gallery: FC = () => {
             key={index}
             className="each-slide relative flex justify-center mx-2 h-[500px]"
           >
-            <a className="cursor-pointer" href={slideImage.url} target="_blank">
+            <a
+              className="cursor-pointer"
+              href={slideImage.url}
+              rel="noreferrer"
+              target="_blank"
+            >
               <Image
                 alt={slideImage.caption}
                 sizes="(max-width: 640px) 100vw, 1080px"

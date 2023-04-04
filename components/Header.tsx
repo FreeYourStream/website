@@ -19,7 +19,7 @@ export const Header: FC<{ title?: string }> = ({ title }) => {
         <header className="flex items-center justify-center h-16 px-8 bg-gray-700 border-b-2 border-gray-600 text-white">
           <div className="flex flex-row justify-center sm:justify-between items-center max-w-page flex-grow">
             <Link href="/">
-              <h1 className="font-fd font-thin text-3xl select-none">
+              <h1 className="font-fd font-thin text-3xl select-none cursor-pointer">
                 FreeYourStream
               </h1>
             </Link>

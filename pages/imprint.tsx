@@ -14,7 +14,7 @@ const Imprint: NextPage = () => {
         <Section title="Imprint">
           <div className="flex flex-col gap-y-4 text-white text-xl">
             <p>
-              FreeYourStream UG (Haftungsbeschränkt)
+              FreeYourStream UG (Haftungsbeschränkt) i.L.
               <br />
               Gutsmuthsstr. 14
               <br />
@@ -24,7 +24,7 @@ const Imprint: NextPage = () => {
             </p>
 
             <p>
-              Tel: +4930 629 31 844
+              Tel: +49160 79 85 686
               <br />
               E-Mail: info@freeyourstream.com
               <br />
@@ -38,9 +38,7 @@ const Imprint: NextPage = () => {
             </p>
 
             <p>
-              Vertretungsberechtigte Geschäftsführer:
-              <br />
-              Tobias Kersting
+              Vertreten durch den Liquidator:
               <br />
               Kilian Gosewisch
             </p>
